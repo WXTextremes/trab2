@@ -9,7 +9,7 @@ import classes.Pessoa;
 
 public class AppHeranca {
     public static void main(String[] args) throws InterruptedException, IOException {
-        final int MAX_ELEMENTOS = 100;
+        final int MAX_ELEMENTOS = 1000;
         final int MAX_ERROS_CPF = 3;
         String cp;
         int opcao, qtdCadastrados = 0;
@@ -91,14 +91,14 @@ public class AppHeranca {
                 System.out.println("insira o cpf: ");
                 cp = in.nextLine();
                 for(int g = 0; g < qtdCadastrados; g++){ 
-                if (cp == motoristas[g].getNome()) {
+                if (cp == motoristas[g].getCpf()) {
                     System.out.printf("\nMotorista %d: %s\n", (g + 1), motoristas[g].getNome());
                     System.out.printf("CPF: %s\n", motoristas[g].getCpf());
                     System.out.printf("Habilitação: %s\n", motoristas[g].getHabilitacao()); 
-                }else 
+                }else
                 System.out.println("Motorista não encontrado"); 
                 voltarMenu(in);
-                continue;         
+                continue;       
                 }
                 voltarMenu(in);
             }else if (opcao != 0) {
